@@ -1,2 +1,2 @@
 # scShade
-Personal R code repository
+Personal R code repository of Yu Li
