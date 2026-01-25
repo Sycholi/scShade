@@ -36,7 +36,7 @@ for(i in 1:length(sample)){
   
   ## ---- Remove empty droplets with DropletUtils ----
   sce.eD = emptyDrops(counts(sce),
-                      lower = sort(colSums(counts(sce)))[2],  # find the second least UMI count as the lower bound  
+                      lower = sort(colSums(counts(sce)))[2], 
                       BPPARAM = MulticoreParam(80))
   # filter 
   sce = sce[,which(sce.eD$FDR <= 0.001)] # cutoff FDR <= 0.01
